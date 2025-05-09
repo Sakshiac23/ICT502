@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const toCurrency = (value) => {
         return new Intl.NumberFormat('en-US', {
             style: 'currency',
-            currency: 'USD',
+            currency: 'AUD',
             minimumFractionDigits: 2,
             maximumFractionDigits: 2
         }).format(value);
