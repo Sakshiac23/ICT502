@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Future Calculator</title>
+    <meta name="description" content="Easily calculate your loan payments and book a free financial consultation in minutes.">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="apple-touch-icon" type="image/png" href="assets/apple-touch-icon.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="hero">
+        <div class="container">
+            <h1>Your Path to Financial Freedom Starts Here</h1>
+            <p class="subheadline">Quickly calculate your loan payments and book a free consultation with one of our experts.</p>
+            <a href="#calculator" class="cta-button">Start Calculating</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="calculator" class="calculator-section">
+            <div class="container">
+                <h2>Loan & Interest Calculator</h2>
+                <div class="calculator-grid">
+                    <div class="input-group">
+                        <label for="loanAmount">Loan Amount ($)</label>
+                        <input type="number" id="loanAmount" min="0" step="1000" required placeholder="e.g. 50000">
+                    </div>
+                    <div class="input-group">
+                        <label for="loanTerm">Loan Term (years)</label>
+                        <input type="number" id="loanTerm" min="1" max="30" required placeholder="e.g. 15">
+                    </div>
+                    <div class="input-group">
+                        <label for="interestRate">Annual Interest Rate (%)</label>
+                        <input type="number" id="interestRate" min="0" step="0.1" required placeholder="e.g. 4.5">
+                    </div>
+                </div>
+                <div class="results-grid">
+                    <div class="result-card">
+                        <h3>Monthly Payment</h3>
+                        <p id="monthlyPayment">$0.00</p>
+                    </div>
+                    <div class="result-card">
+                        <h3>Total Paid</h3>
+                        <p id="totalPaid">$0.00</p>
+                    </div>
+                    <div class="result-card">
+                        <h3>Total Interest</h3>
+                        <p id="totalInterest">$0.00</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="consultation" class="consultation-section">
+            <div class="container">
+                <h2>Book Your Free Consultation</h2>
+                <form id="consultationForm" class="consultation-form">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="fullName">Full Name</label>
+                            <input type="text" id="fullName" name="fullName" required placeholder="John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required placeholder="you@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="(123) 456-7890">
+                        </div>
+                        <div class="form-group">
+                            <label for="preferredDate">Preferred Date</label>
+                            <input type="date" id="preferredDate" name="preferredDate" required>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="notes">Any Additional Notes</label>
+                            <textarea id="notes" name="notes" rows="4" placeholder="Let us know any specific details."></textarea>
+                        </div>
+                    </div>
+                    <button type="submit" class="submit-button">Book Consultation</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Financial Future Calculator. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/config.js"></script>
+    <script src="js/calculator.js"></script>
+    <script src="js/form.js"></script>
+</body>
+
+</html>
